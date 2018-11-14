@@ -23,4 +23,6 @@
     4.change nav html structure(nav.component.html)
         4.1 remove all /done
         4.2 add some [<a routerLink="/">] tags /done
-        
+    
+    5.work with these components.
+        5.1 add title propertie on nav-component /done
