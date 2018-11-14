@@ -26,3 +26,5 @@
     
     5.work with these components.
         5.1 add title propertie on nav-component /done
+    6.configure global scss setting(styles.scss)
+        6.1 paste from the source /done
