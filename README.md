@@ -28,3 +28,5 @@
         5.1 add title propertie on nav-component /done
     6.configure global scss setting(styles.scss)
         6.1 paste from the source /done
+        6.2 add nav-components scss. paste from the source/ done
+        
