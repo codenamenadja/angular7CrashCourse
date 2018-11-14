@@ -16,3 +16,11 @@
     2.4 "home" component generate /done
         work flow
         1.[ng g c home] as {2.1-1}
+
+    3.change bootstraping html structure(app.component.html)
+        3.1 remove whole thing except [<router-outlet>] /done
+        3.2 show nav-components tag inside main html's [<section>] /done
+    4.change nav html structure(nav.component.html)
+        4.1 remove all /done
+        4.2 add some [<a routerLink="/">] tags /done
+        
