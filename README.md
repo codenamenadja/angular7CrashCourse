@@ -1,4 +1,9 @@
-1.angualr/cli version after 7.0.x
-2.ng new myng7
-    2.1. allow routing
-    2.2. styling to be scss
+1.setting up angular7
+    -allow routing  /done
+    -styling to be scss /done
+
+2.generate 4 more components
+    2.1 "nav" component generate /done
+        work flow
+        1.[ng g c nav] command in cli interface.
+            -updated app.module.ts automatically    
