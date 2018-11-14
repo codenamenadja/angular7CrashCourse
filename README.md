@@ -7,3 +7,7 @@
         work flow
         1.[ng g c nav] command in cli interface.
             -updated app.module.ts automatically    
+    2.2 "about" component generate /done
+        work flow
+        1.[ng g c about] as {2.1-1}
+        
