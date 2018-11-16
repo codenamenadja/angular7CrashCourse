@@ -29,4 +29,9 @@
     6.configure global scss setting(styles.scss)
         6.1 paste from the source /done
         6.2 add nav-components scss. paste from the source/ done
-        
+    
+    7.setup the routings.
+        7.1 in app-routing.module.ts, set Routes as routes.
+        and fill routing addr in side as [ routes:Routes =[
+            {path:'about',component:AboutComponent}, ...
+            ]; ]
