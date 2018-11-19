@@ -35,3 +35,6 @@
         and fill routing addr in side as [ routes:Routes =[
             {path:'about',component:AboutComponent}, ...
             ]; ]
+    8.Make up with HomeComponent.
+        8.1 build home html with [<button (click)="firstClick()">click me!<button>]
+        8.2 add firstClick method to 'home.component.ts'file. gonna show message with window.alert().
