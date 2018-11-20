@@ -68,3 +68,6 @@
         14.6 data we got will place in home.component's this.users:Object. place it into home.C.html.
         14.7 in home.C.html uses <ul *ngif="users"> and inside those, <li *ngFor="let user of users.data">. alse {{user.first_name}} <img [src]="user.avatar> for databinding.
         14.8 worked, get scss from sourseCode to look better.
+        //37:26
+
+        15.angular7 Forms.
