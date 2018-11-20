@@ -46,3 +46,6 @@
     10.multiple classbinding in single elem(tag).
         10.1 add p elem into home.C.html  with <p [ngClass]="{'gray':h1Style, 'large':!h1Style}">
         10.2 add new home.C.scss, .large{font-size:1.2rem} / event already bind to button, changes h1Style attr to opposite. so no more to do.
+    11.style binding
+        11.1 added h2tag into home.C.html <h2 [style.color]="h1style ?  'gray' : 'black'">
+        11.2 for multiple stylebinding, added new home.C.html>p elem. <p [ngStyle]="{'color': h1Style ? 'gray' : 'orange', 'font-size' : h1Style ? '1.1rem' : '1.3rem'}"> / style binding would be better than class binding if only a few(1 or 2 -> not related, also not structural) changes.
