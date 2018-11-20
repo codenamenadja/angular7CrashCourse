@@ -58,3 +58,5 @@
     13.http database connetion setup
         13.1 import HttpClientModule, and register in NgModule's imports.
         13.2 httpmodule places into service.
+    14.dataService uses HTTP connected db.
+        14.1 in dataService imports HttpClient. not HttpClientModule.
