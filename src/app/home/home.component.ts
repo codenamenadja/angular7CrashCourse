@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   h1Style: boolean = false;
-  constructor() { }
+  constructor(private dbService: DataService) { }
 
   ngOnInit() {
   }
 
   firstClick() {
+    this.dbService.logMsg("home.component.ts");
     window.alert(`HomeComponent.firstClick method work.`);
     window.alert(`welcome to home component!/ before change class-bind`);
     this.h1Style = !this.h1Style;

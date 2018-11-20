@@ -53,3 +53,5 @@
     -- service --
     12.service creation
         12.1 generate service named data.
+        12.2 make dataService.logMsg(arg) to logs out "executed during, [arg]." 
+        12.3 home.component.ts>firstClick() uses this service method.
