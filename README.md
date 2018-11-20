@@ -38,3 +38,7 @@
     8.Make up with HomeComponent.
         8.1 build home html with [<button (click)="firstClick()">click me!<button>]
         8.2 add firstClick method to 'home.component.ts'file. gonna show message with window.alert().
+    9.add Classbinding to home-h1. switch by home-button.
+        9.1 add boolean attribute to home component named [h1Style:boolean = false;].
+        9.2 add class binding to home.html.h1> elem. <[class.gray]= "h1Style"> goes into h1 inside.
+        9.3 home.component's button click method appears => this.h1Style = !this.h1Style. made it to be opposite.
