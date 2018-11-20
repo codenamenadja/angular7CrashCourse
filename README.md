@@ -41,4 +41,8 @@
     9.add Classbinding to home-h1. switch by home-button.
         9.1 add boolean attribute to home component named [h1Style:boolean = false;].
         9.2 add class binding to home.html.h1> elem. <[class.gray]= "h1Style"> goes into h1 inside.
-        9.3 home.component's button click method appears => this.h1Style = !this.h1Style. made it to be opposite.
+        9.3 home.component's button click method appears => this.h1Style = !this.h1Style. made it to be opposite. click -> boolean to opposite -> if true -> class bind as 'gray'.
+        9.4 add home.component.scss [.gray{color:gray}]
+    10.multiple classbinding in single elem(tag).
+        10.1 add p elem into home.C.html  with <p [ngClass]="{'gray':h1Style, 'large':!h1Style}">
+        10.2 add new home.C.scss, .large{font-size:1.2rem} / event already bind to button, changes h1Style attr to opposite. so no more to do.
