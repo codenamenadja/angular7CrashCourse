@@ -60,3 +60,7 @@
         13.2 httpmodule places into service.
     14.dataService uses HTTP connected db.
         14.1 in dataService imports HttpClient. not HttpClientModule.
+        14.2 dataService if set HttpClient done? -> add method [getUsers(){return this.http.get(api);}] to get fake users-list for practice.
+        14.3 then home.C lifeCycle hook 'ngOnInit()' uses this.dbService.
+        14.4 rename this.dbService to dService.
+        14.5 this.dService.getUsers() in home.C return data transferred. so log That to make Sure.

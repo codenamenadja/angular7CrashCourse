@@ -9,13 +9,19 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
 
   h1Style: boolean = false;
-  constructor(private dbService: DataService) { }
+  users: Object;
 
-  ngOnInit() {
+  constructor(private dService: DataService) { }
+
+  ngOnInit(): void {
+    this.dService.getUsers().subscribe((userListWeGot) => {
+      this.users = userListWeGot;
+      console.log(this.users);
+    })
   }
 
   firstClick() {
-    this.dbService.logMsg("home.component.ts");
+    this.dService.logMsg("home.component.ts");
     window.alert(`HomeComponent.firstClick method work.`);
     window.alert(`welcome to home component!/ before change class-bind`);
     this.h1Style = !this.h1Style;

@@ -9,4 +9,8 @@ export class DataService {
   logMsg(msg: string): void {
     return console.log(`executed during, ${msg}.`);
   }
+  getUsers(): object {
+    // api for get fake db.
+    return this.http.get('https://reqres.in/api/users');
+  }
 }
