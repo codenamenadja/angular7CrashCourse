@@ -1,5 +1,20 @@
 <h1 [class.gray]="h1Style">Home</h1>
+<h3 *ngIf="!users">
+  loading for get userlist... takes bit of secs.
+</h3>
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar" alt="userImage">
+    <p>{{user.first_name}} {{user.last_name}}</p>
+  </li>
+</ul>
 <h2 [style.color]="h1Style ? 'gray':'black' ">style bindings.</h2>
-<p [ngStyle]="{'color': h1Style ? 'gray' : 'orange', 'font-size' : h1Style ? '1.1rem' : '1.3rem'}">multiple style binding</p>
-<p [ngClass]="{'gray': h1Style, 'large':!h1Style}">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p [ngStyle]="{'color': h1Style ? 'gray' : 'orange', 'font-size' : h1Style ? '1.1rem' : '1.3rem'}">multiple style
+  binding</p>
+<p [ngClass]="{'gray': h1Style, 'large':!h1Style}">Lorem Ipsum is simply dummy text of the printing and typesetting
+  industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+  a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+  leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+  of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+  PageMaker including versions of Lorem Ipsum.</p>
 <button (click)="firstClick()">Click me</button>

@@ -1,3 +1,4 @@
+// for class, style binding.
 .gray {
     color: gray;
 }
@@ -6,4 +7,29 @@
 }
 h1,p{
     transition: font-size 1s ease-in, color 1s ease-out 1.1s;
+}
+
+// for user-list
+ul {
+    list-style-type: none;
+    margin: 0;padding: 0;
+
+    li {
+        background: rgb(209, 209, 209);
+        padding: 2em;
+        border-radius: 7px;
+        margin-bottom: 12px;
+        display: grid;
+        grid-template-columns: 60px auto;
+
+        p {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
 }

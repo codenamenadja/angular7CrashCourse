@@ -64,3 +64,7 @@
         14.3 then home.C lifeCycle hook 'ngOnInit()' uses this.dbService.
         14.4 rename this.dbService to dService.
         14.5 this.dService.getUsers() in home.C return data transferred. so log That to make Sure.
+        // by 14.5 we can find that data we got is userList-page1. each page has 3 users inspects. and there are 4page. so could be max 12 users.
+        14.6 data we got will place in home.component's this.users:Object. place it into home.C.html.
+        14.7 in home.C.html uses <ul *ngif="users"> and inside those, <li *ngFor="let user of users.data">. alse {{user.first_name}} <img [src]="user.avatar> for databinding.
+        14.8 worked, get scss from sourseCode to look better.
