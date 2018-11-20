@@ -55,3 +55,6 @@
         12.1 generate service named data.
         12.2 make dataService.logMsg(arg) to logs out "executed during, [arg]." 
         12.3 home.component.ts>firstClick() uses this service method.
+    13.http database connetion setup
+        13.1 import HttpClientModule, and register in NgModule's imports.
+        13.2 httpmodule places into service.
