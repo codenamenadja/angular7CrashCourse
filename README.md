@@ -76,3 +76,7 @@
         15.angular7 Forms.
             15.1 setUp ReactiveFormModule. import from '@angular/forms' and inject that.
             15.2 load {FormBuilder, FormGroup, Validators} in contact.C.ts from '@angular/froms'
+            15.3 with FormBuilder.group() virtual group will place in this.messageForm:FormGroup.
+            15.4 add form with Ng attr-binding, event-binding [formGroup]="messageForm" (ngSubmit)="onSubmit()" in contact.C.html.
+            15.5 in html, add some directives with *ngIf="" for error handling. error will be in component's messageForm's state.
+    
