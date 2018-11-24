@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   firstClick() {
-    this.dService.logMsg("home.component.ts");
+    this.dService.logMsg(`home.component.ts`);
     window.alert(`HomeComponent.firstClick method work.`);
     window.alert(`welcome to home component!/ before change class-bind`);
     this.h1Style = !this.h1Style;

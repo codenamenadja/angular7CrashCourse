@@ -71,3 +71,5 @@
         //37:26
 
         15.angular7 Forms.
+            15.1 setUp ReactiveFormModule. import from '@angular/forms' and inject that.
+            15.2 load {FormBuilder, FormGroup, Validators} in contact.C.ts from '@angular/froms'
