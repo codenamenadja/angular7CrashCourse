@@ -95,13 +95,67 @@
       view가 보여지기 이전에, 앵귤러는 directives를 평가 및 확인합니다.
       이후 HTML elemments와 DOM을 수정하기 위해 템플릿의 binding syntax를 당신의 프로그램 data와 logic에 따라 풀어냅니다.
       앵귤러는 <i>two-way</i> data binding을 지원합니다. 그것은 DOM의 변화들이 마찬가지로
-      당신의 프로그램 data에도 전달되는 것을 의미합니다. 
+      당신의 프로그램 data에도 전달되는 것을 의미합니다.
       <br />
       <br />
       당신의 템플릿은 display에서 값을 변화시키는 것을 통해 UI를 향상시키기 위하여 <i>pipes</i>를 사용할 수 있습니다.
       예를 들어, 유저의 접속지역에 따른 적절한 화폐단위나 시간을 보여주기 위해 pipes를 사용해보세요.
       앵귤러는 일반적인 전환 및 변환을 위해 미리 정의된 pipes를 지원합니다.
       그리고 당신은 자신만의 pipes를 정의할 수도 있습니다.
+    </p>
+  </article>
+  <article>
+    <h3>Services and dependency injection</h3>
+    <p>
+      뷰와 직접적인 관련이 없는 데이터와 로직을 위해서, 그리고 컴포넌트들 사이에서 공유하기위해서 당신은 <i>service</i> class를 생성합니다.
+      service class의 정의는 즉각적으로 <i>@Injectable()</i> decorator에 의해 진행됩니다.
+      decorator은 클라이언트-컴포넌트에게 dependency로서 주입되도록 허락하는 메타데이터를 공급합니다.
+      <br />
+      <br />
+      <i>Dependency injection</i> (DI)는 당신의 컴포넌트를 의존적이고 효율적으로 만들어줍니다.
+      그들(컴포넌트들)은 서버로부터 데이터를 교환하거나, user input의 유효성을 체크하거나 또는 콘솔로 직접적으로 로그를 출력하지 않습니다.
+      그들은 그러한 일들을 services에 의탁(delegate)시킵니다.
+    </p>
+  </article>
+  <article>
+    <h3>Routing</h3>
+    <p>
+      앵귤러의 <i>Router</i> NgModule은 어플리케이션의 다른 상태와 뷰의 트리구조 사이에서 navigation path를 당신이 정의하도록 돕는 서비스를 제공합니다.
+      이것은 친숙한 브라우저 navigation conventions(네비게이션 관습) 위에서 모델화 됩니다.
+      <br />
+      <br />
+      -주소창에 URL을 입력하면 브라우저가 호환하는 페이지로 이동합니다.
+      <br />
+      -페이지의 링크를 클릭하면 브라우저가 새로운 창으로 이동합니다.
+      <br />
+      -브라우저의 뒤로가기 앞으로가기 버튼을 클릭하면 브라우저는 당신이 본 기록을 기반으로 이동합니다.
+      <br />
+      <br />
+      router는 URL같은 주소를 페이지들이 아닌 뷰로 매핑합니다.
+      유저가 행동을 취하면, 예)링크 클릭, 그것은 새로운 파이지를 브라우저로 불러올 것입니다.
+      여기서 <i>router</i>는 브라우저의 행동을 intercept하여 뷰의 트리구조를 보여주거나 감추거나 하게 됩니다.
+      <br />
+      만약 router가 현재 어플리케이션 상태가 특정한 기능을 요구한다고 결정한다면, 그리고 해당 모듈이 아직 로드되지 않았다면,
+      router는 모듈을 필요에 따라 <i>lazy-load</i> 할 수 있습니다.
+      <br />
+      라우터는 해당 앱의 view navigation ruls와 data state에 따라 URL링크를 해석합니다.
+      당신은 유저가 버튼을 클릭하거나, 어떤 소스에서 발생한 다른 자극에 응답하기 위해 다른 새로운 view로 이동할 수 있습니다.
+      router는 브라우저 기록안에 행동을 기록하고, 따라서 forward and back 버튼 또한 잘 작동할 수 있습니다.
+      <br />
+      네비게이션 rules를 정의하기 위해, 당신은 컴포넌트와 navigation path들을 연관시킵니다.
+      path는 당신의 program data를 통합하는 URL-like syntax를 사용합니다.
+      마찬가지로 동일한 방식으로 template syntax도 당신의 views를 당신의 program data와 통합시킵니다.
+      그러면 당신은 어떤 뷰들을 보여주고 숨길지 정하는, user input과 당신 고유의 접근 규칙에 응답할 수 있는 program logic을 적용시킬 수 있겠지요.
+    </p>
+  </article>
+  <article>
+    <h3>What's next</h3>
+    <p>
+      당신은 앵귤러의 메인 구축 blocks(NgModule, component...)에 대한 기본을 습득했습니다.
+      아래의 다이아그램은 이 기본적인 조각들이 관련됐는지 보여줍니다.
+      <br />
+        <img src="https://angular.io/generated/images/guide/architecture/overview2.png" alt="angular-relational-diagram">
+      <br />
     </p>
   </article>
 </section>

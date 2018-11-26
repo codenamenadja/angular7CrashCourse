@@ -1,5 +1,6 @@
     0.fill up page with angular-official guide(https://angular.io/guide/architecture)'s my own translation to korean
         0.1 Templates, directives, and data binding /done
+        0.2 overview all /done
 
     1.setting up angular7
         -allow routing  /done
