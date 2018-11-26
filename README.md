@@ -77,6 +77,13 @@
             15.1 setUp ReactiveFormModule. import from '@angular/forms' and inject that.
             15.2 load {FormBuilder, FormGroup, Validators} in contact.C.ts from '@angular/froms'
             15.3 with FormBuilder.group() virtual group will place in this.messageForm:FormGroup.
-            15.4 add form with Ng attr-binding, event-binding [formGroup]="messageForm" (ngSubmit)="onSubmit()" in contact.C.html.
+            15.4 add form with Ng attr-binding, event-binding [formGroup]="messageForm" (ngSubmit)="onSubmit()" in contact.C.html.고
             15.5 in html, add some directives with *ngIf="" for error handling. error will be in component's messageForm's state.
-    
+        
+        16.error handling
+            16.1 data.service에 요청한 http관련 메서드객체를 리턴받을때 문제
+                16.1.1 data 서비스에 요청한 http객체가 돌아왔을때 완전히 처리가 완료된 상태가 아닐 뿐더러 타입에 대한 정의가 난감한 상황이라 subscribe메서드 체이닝을 바로 이어서 하는데 문제가 생겼습니다. 돌려받은 객체가 아직 Get과정중이기 때문에 중간단계의 과정이라는 점도 조금 신경쓰입니다. 혹은 getUsers()의 타입이 명확하지 않기 때문에 any로 처리해 버리면 굉장히 간편하지만.
+                16.1.2 subscribe메서드 자체를 data.service로 넘기고 promise처리를 해서 단계적으로 진행이 되도록 컨트롤을 하도록 해봅니다 subscribe의 콜백에서 res(userList)처리를 해버리기로 합니다.
+                16.1.3 home.C에서는 res로 돌려받는 내용을 그대로 .then((userList)=>{this.users = data}); 로 처리하였습니다.
+                16.1.4 해결은 되었습니다만, 원본이 변할때 async한 이벤트를 처리해주는 subscribe는 사용이 되는지 확인 할 수 없습니다.
+                16.1.5 subscribe기능이 home안에서만 유효할 수 있도록 다시 돌려놓고 타입에 대한 정의만 any로 바꾸었습니다. 기존과 큰차이는 없지만, promise로 http통신 자체가 유효했는지 에러핸들링을 진행하였다는점. 분기를 만들었다는 점에서 기존보다 낫습니다.

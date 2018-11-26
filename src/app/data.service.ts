@@ -9,8 +9,22 @@ export class DataService {
   logMsg(msg: string): void {
     return console.log(`executed during, ${msg}.`);
   }
-  getUsers(): object {
+  getUsers(): Promise<Object> {
     // api for get fake db.
-    return this.http.get('https://reqres.in/api/users');
+    // orginal
+    // return this.http.get('https://reqres.in/api/users');
+    //
+    // error occoured!
+    // new code
+    return new Promise((res, rej) => {
+      console.log('promise start - lev1');
+      let httpCall;
+      if (httpCall = this.http.get('https://reqres.in/api/users')) {
+        console.log('http.get worked - lev2')
+        res(httpCall);
+      } else {
+        console.error('error - lev2');
+      }
+    });
   }
 }

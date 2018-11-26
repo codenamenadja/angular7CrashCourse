@@ -14,10 +14,21 @@ export class HomeComponent implements OnInit {
   constructor(private dService: DataService) { }
 
   ngOnInit(): void {
-    this.dService.getUsers().subscribe((userListWeGot) => {
-      this.users = userListWeGot;
-      console.log(this.users);
-    })
+    // original
+    // this.dService.getUsers().subscribe((userListWeGot) => {
+    //   this.users = userListWeGot;
+    //   console.log(this.users);
+    // });
+    //
+    // new code
+    this.dService.getUsers().then((httpCall: any) => {
+      console.log('got returned promise - lev3');
+      httpCall.subscribe((userList: Object) => {
+        console.log('subscribe in home.C - lev4 /end');
+        this.users = userList;
+      })
+    });
+    //
   }
 
   firstClick() {
